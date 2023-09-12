@@ -11,6 +11,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
     'plugin:tailwindcss/recommended',
     'plugin:react-hooks/recommended',

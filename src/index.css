@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+main {
+  @apply absolute inset-0;
+  min-height: 100%;
+}
