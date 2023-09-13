@@ -84,8 +84,8 @@ function App() {
   }, [boardState, moves, checkWinner])
 
   return (
-    <main className="flex flex-col items-center">
-      <header className="flex w-full items-center justify-between bg-black text-white">
+    <main className="flex flex-col items-center dark:bg-black">
+      <header className="flex w-full items-center justify-between border-b-slate-800 bg-black text-white dark:border-b">
         <h1 className="ml-4 font-bold">
           {winner ? (
             <>
@@ -108,18 +108,18 @@ function App() {
         </button>
       </header>
 
-      <section className="m-auto flex flex-col items-center justify-center gap-[1vmin] bg-black">
-        <div className="flex gap-[inherit] bg-black">
+      <section className="m-auto flex flex-col items-center justify-center gap-[1vmin] bg-black dark:bg-slate-700">
+        <div className="flex gap-[inherit] bg-black dark:bg-slate-700">
           <Square onClick={updateBoardSquare(0, 0)} value={boardState[0][0]} />
           <Square onClick={updateBoardSquare(0, 1)} value={boardState[0][1]} />
           <Square onClick={updateBoardSquare(0, 2)} value={boardState[0][2]} />
         </div>
-        <div className="flex gap-[inherit] bg-black">
+        <div className="flex gap-[inherit] bg-black dark:bg-slate-700">
           <Square onClick={updateBoardSquare(1, 0)} value={boardState[1][0]} />
           <Square onClick={updateBoardSquare(1, 1)} value={boardState[1][1]} />
           <Square onClick={updateBoardSquare(1, 2)} value={boardState[1][2]} />
         </div>
-        <div className="flex gap-[inherit] bg-black">
+        <div className="flex gap-[inherit] bg-black dark:bg-slate-700">
           <Square onClick={updateBoardSquare(2, 0)} value={boardState[2][0]} />
           <Square onClick={updateBoardSquare(2, 1)} value={boardState[2][1]} />
           <Square onClick={updateBoardSquare(2, 2)} value={boardState[2][2]} />

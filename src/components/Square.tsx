@@ -11,8 +11,8 @@ interface Props
 }
 
 const ICONS: Record<Player, ReactNode> = {
-  X: <TimesIcon />,
-  O: <CircleIcon />,
+  X: <TimesIcon className="dark:fill-white" />,
+  O: <CircleIcon className="dark:fill-white" />,
 }
 
 export default function Square({ className, onClick, value }: Props) {
@@ -21,7 +21,7 @@ export default function Square({ className, onClick, value }: Props) {
       onClick={onClick}
       disabled={Boolean(value)}
       className={twMerge(
-        'relative flex h-[25vmin] w-[25vmin] items-center justify-center text-[15vmin] bg-white',
+        'relative flex h-[25vmin] w-[25vmin] items-center justify-center text-[15vmin] bg-white dark:bg-black',
         className,
       )}
     >
